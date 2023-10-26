@@ -1,3 +1,12 @@
+import { useState } from "react";
+import { MultiStepForm } from "./components/Multistep/MultiStepForm";
+
 export const App = () => {
-  return <div>Find me in src/app.jsx!</div>;
-};
+
+const [name, setName] = useState("");
+  
+  return(
+     <div>Find me in src/app.jsx!
+      <MultiStepForm/>
+  </div>
+)};
