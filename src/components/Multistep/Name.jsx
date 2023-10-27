@@ -3,8 +3,14 @@ import { useState } from "react"
 export const Name = () => {
     const [name, setName] = useState()
   return (
-    <div>Name : 
-        <input type="text"></input> 
-         </div>
+    <form>
+  <div className="container">
+    <div className="question">Hi! What are your name? </div>
+   
+     <div className="answer">
+          <input className="styleAnswer" type="text"></input>
+      </div>
+  </div>
+  </form>
   )
 }

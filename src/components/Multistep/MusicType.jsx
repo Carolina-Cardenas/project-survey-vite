@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const musicTypes = ["Rock", "LatinMusic", "Pop"];
+const musicTypes = ["Rock", "LatinMusic", "Pop" , "Electronic/Dans" , "Blues/Jass" , "Urban Music" , "Others"];
 export const MusicType = () => {
   const [musicType, setMusicType] = useState(
     new Array(musicTypes.length).fill(false)
@@ -13,8 +13,8 @@ export const MusicType = () => {
   };
   return (
     <form>
-      What kind of music do you like to listen?:
-      {musicTypes.map(({ type }, index) => (
+     <div> What kind of music do you like to listen?</div>
+     <div> {musicTypes.map(( type , index) => (
         <label key={index}>
           <input
             type="checkbox"
@@ -25,6 +25,7 @@ export const MusicType = () => {
           {type}
         </label>
       ))}
+      </div>
     </form>
   );
 };
