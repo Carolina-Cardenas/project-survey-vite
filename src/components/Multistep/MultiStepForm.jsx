@@ -20,21 +20,41 @@ export const MultiStepForm = () => {
    averageTime:""
   })
 
-  const [currentStep , setCurrentStep ] = useState(1)
-  return (
+  const [currentStep , setCurrentStep ] = useState(1);
+
+  const updateFromData = (field , value) => {
+    setFormData ((values) => ({...value, [field]: value}));
+  };
+
+  const nextStep = () => {
+    if (currentStep < 6 ) setCurrentStep (currentStep + 1);
+ };
+
+ const prevStep =  () => {
+  if (currentStep > 1) setCurrentStep (currentStep - 1);
+ };
+
+ const submitForm = () => {
+  console.log(formData);
+  const formattedData = `
+  name: ${formData.name}
+  ageGroup:${formData.ageGroup}
+  gender:${formData. gender}
+  email:${formData.email}
+  favoriteArtist:${formData. favoriteArtist}
+  musicType:${formData.musicType}
+  averageTime: ${formData.averageTime}
+ ` ; 
+ alert(formattedData)
+ }
+ 
+ 
+  
+    return (
     <div className="body">
-   <Header/>
-      <Name/>
-      <AgeGroup/>
-      <Gender/>
-      <Email/>
-      <MusicType/>
-      <FavoriteArtist/>
-      <AverageTime/>
-      <Submit/>
-
-
       
+
     </div>
   )
-}
+    }
+
