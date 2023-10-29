@@ -10,10 +10,12 @@ export const AgeGroup = ({updateFormData , value}) => {
   return (
     <form>
        <div className="container">
+       <div className="spanText">
        <span className="spanText"> In what age range are you?</span>
+       </div>
        <div className='radio-buttons'>
         {ageGroups.map(group => (
-          <label  key={group} htmlFor="group" className='radio-button-label'>
+          <label  key={group} htmlFor="group" className='radioText'>
            <input 
               type="radio"
               value={group}

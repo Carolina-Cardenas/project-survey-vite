@@ -36,13 +36,14 @@ export const MultiStepForm = () => {
  const submitForm = () => {
   console.log(formData);
   const formattedData = `
-  name: ${formData.name}
-  ageGroup:${formData.ageGroup}
-  gender:${formData. gender}
-  email:${formData.email}
-  favoriteArtist:${formData. favoriteArtist}
-  musicType:${formData.musicType}
-  averageTime: ${formData.averageTime}
+  Hi! ${formData.name}
+  This is the information we collected from you:
+  Your email is ${formData.email}
+  You are in the age range ${formData.ageGroup}
+  You are a ${formData. gender}
+  Your favorite artist is ${formData. favoriteArtist}
+  You like to listen to ${formData.musicType}
+  You listen to music for ${formData.averageTime} a day
  ` ; 
  alert(formattedData)
  }
@@ -63,8 +64,8 @@ export const MultiStepForm = () => {
   
    
       <div className="buttons">
-      {currentStep > 1 && <button onClick={prevStep}>back</button>}
-      {currentStep < 7 ? ( <button onClick={nextStep}>next</button>):(<button onClick={submitForm}>submit</button>) }
+      {currentStep > 1 && <button onClick={prevStep}>Back</button>}
+      {currentStep < 7 ? ( <button onClick={nextStep}>Next</button>):(<button onClick={submitForm}>Submit</button>) }
       </div>
     </div>
    

@@ -26,8 +26,9 @@ code {
 
 }
 button {
-  background-color: blue;
-  color: #fff;
+  background-color: rgb(124, 192, 192);
+  color:rgb(42, 97, 96) ;
+
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -37,6 +38,7 @@ button {
 }
 
 h1{
+  color: rgb(124, 192, 192);
   margin-top: 20px;
   margin-bottom: 50px;
   text-align: center;
@@ -53,17 +55,7 @@ form{
   align-items: center;
  }
 
-  .styleAnswer {
-  background-color: transparent;
-  color: #100c0c;
-  outline: none;
-  outline-style: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid #0c0404 2px;
-  padding: 3px 10px;
-}
+
 .buttons{
   display: flex;
   flex-direction: row;
@@ -98,44 +90,87 @@ form{
   background-origin: initial;
   background-clip: initial;
   transform: translateZ(0px);
-  font-size: 30px;
+  font-size: 24px;
   -webkit-font-smoothing: antialiased;
   line-height: unset;
-  -webkit-text-fill-color: rgb(202, 231, 231);
+  -webkit-text-fill-color: rgb(124, 192, 192);
   animation: 1ms ease 0s 1 normal none running native-autofill-in;
   transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
   box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
   background-color: transparent !important;
 }
 .spanText{    
-  margin: 0px;
+  margin-top:10px;
+  margin-bottom: 20px;
+  color:  rgb(70, 155, 153); 
   max-width: 100%;
   width: inherit;
   font-weight: unset;
   font-size: 24px;
-  line-height: 32px;}
+  line-height: 32px;
+}
 
   .radio-button-label {
     position: relative;
     cursor: pointer;
   }
-  
-  .radio-button-custom {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 20px;
-    width: 20px; 
-    border: 1px solid #000; 
-    border-radius: 50%;
+
+  .selectText{
+    display: block;
+    font-family: inherit;
+    color: rgb(79, 176, 174);
+    padding-block-start: 0px;
+    padding-block-end: var(--spacing-100);
+    padding-inline: 0px;
+    border-color:  rgb(79, 176, 174); ;
+    outline: none;
+    border-radius: 0px;
+    transform: translateZ(0px);
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+    line-height: unset;
+    -webkit-text-fill-color: rgb(124, 192, 192);
+    animation: 1ms ease 0s 1 normal none running native-autofill-in;
+    transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
+    box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+  }
+  .radioText{
+    display: block;
+    font-family: inherit;
+    color: rgb(79, 176, 174);
+    padding-block-start: 0px;
+    padding-block-end: var(--spacing-100);
+    padding-inline: 0px;
+    border-color:  rgb(79, 176, 174); ;
+    outline: none;
+    border-radius: 0px;
+    transform: translateZ(0px);
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+    line-height: unset;
+    -webkit-text-fill-color: rgb(124, 192, 192);
+    animation: 1ms ease 0s 1 normal none running native-autofill-in;
+    transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
+  }
+  .radio-buttons label input[type="radio"] {
+    margin-right: 10px; 
+  }
+  @media (min-width: 768px) {
+    .box {
+      flex-basis: calc(100%/3);
+      padding: 0 10px;
+    }
+    .responsive-header {
+      font-size: 35px;
+    }
   }
   
- 
-  .radio-button-label input:checked + .radio-button-custom {
-    background-color: #000; 
-  }
-  
-  
-  .radio-button-label:hover .radio-button-custom {
-    background-color: #ddd;
+  @media (min-width: 1024px) {
+    .box {
+      flex-basis: calc(100%/4);
+      padding: 0 10px;
+    }
+    .responsive-header {
+      font-size: 65px;
+    }
   }
