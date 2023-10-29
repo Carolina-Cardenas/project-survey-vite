@@ -6,7 +6,6 @@ import {Email } from "./Email";
 import {FavoriteArtist } from "./FavoriteArtist";
 import {MusicType} from "./MusicType";
 import {AverageTime } from "./AverageTime";
-import {Submit } from "./Submit";
 import { Header} from "./Header";
 
 export const MultiStepForm = () => {
@@ -22,12 +21,12 @@ export const MultiStepForm = () => {
 
   const [currentStep , setCurrentStep ] = useState(1);
 
-  const updateFromData = (field , value) => {
-    setFormData ((values) => ({...value, [field]: value}));
+  const updateFormData = (field , value) => {
+    setFormData ((values) => ({...values, [field]: value}));
   };
 
   const nextStep = () => {
-    if (currentStep < 6 ) setCurrentStep (currentStep + 1);
+    if (currentStep < 7 ) setCurrentStep (currentStep + 1);
  };
 
  const prevStep =  () => {
@@ -49,12 +48,27 @@ export const MultiStepForm = () => {
  }
  
  
-  
+  console.log(currentStep)
     return (
     <div className="body">
-      
-
+      <Header/>
+     
+      { currentStep === 1 && <Name value = {formData.name} updateFormData = { updateFormData}/>}
+      { currentStep === 2 && <AgeGroup value = {formData.ageGroup} updateFormData = { updateFormData}/>}
+      { currentStep === 3 && <Gender value = {formData.gender} updateFormData = { updateFormData}/>}
+      { currentStep === 4 && <Email value = {formData.email} updateFormData = { updateFormData}/>}
+      { currentStep === 5 && <FavoriteArtist value = {formData.favoriteArtist} updateFormData = { updateFormData}/>}
+      { currentStep === 6 && <MusicType value = {formData.musicType} updateFormData = { updateFormData}/>}
+      { currentStep === 7 && <AverageTime value = {formData.averageTime} updateFormData = { updateFormData}/>}
+  
+   
+      <div className="buttons">
+      {currentStep > 1 && <button onClick={prevStep}>back</button>}
+      {currentStep < 7 ? ( <button onClick={nextStep}>next</button>):(<button onClick={submitForm}>submit</button>) }
+      </div>
     </div>
+   
   )
     }
 
+ 

@@ -1,16 +1,14 @@
-import { useState } from "react"
+export const Name = ({updateFormData , value}) => {
 
-export const Name = () => {
-    const [name, setName] = useState()
+  const  nameInput = (e) => updateFormData("name" , e.target.value)
   return (
     <form>
-  <div className="container">
-    <div className="question">Hi! What are your name? </div>
-   
-     <div className="answer">
-          <input className="styleAnswer" type="text"></input>
-      </div>
-  </div>
+      <div className="container">
+        <span className="spanText">Hi! What are your name? </span>
+        <div className="answer">
+          <input className="inputText" type="text" value={value} onChange={nameInput}/>
+        </div>
+      </div>    
   </form>
   )
 }

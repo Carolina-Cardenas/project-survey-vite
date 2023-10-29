@@ -22,6 +22,7 @@ code {
   border: 1px solid #ccc;
   border-radius: 5px;
   align-content: center;
+  
 
 }
 button {
@@ -31,10 +32,13 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 5px;
+  margin-top: 40px;
 }
 
 h1{
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
   text-align: center;
   
 }
@@ -48,3 +52,90 @@ form{
   justify-content: center;
   align-items: center;
  }
+
+  .styleAnswer {
+  background-color: transparent;
+  color: #100c0c;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #0c0404 2px;
+  padding: 3px 10px;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  
+}
+.radio-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputText{
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  color: rgb(79, 176, 174);
+  padding-block-start: 0px;
+  padding-block-end: var(--spacing-100);
+  padding-inline: 0px;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  appearance: none;
+  background-image: none;
+  background-position: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  transform: translateZ(0px);
+  font-size: 30px;
+  -webkit-font-smoothing: antialiased;
+  line-height: unset;
+  -webkit-text-fill-color: rgb(202, 231, 231);
+  animation: 1ms ease 0s 1 normal none running native-autofill-in;
+  transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
+  box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+  background-color: transparent !important;
+}
+.spanText{    
+  margin: 0px;
+  max-width: 100%;
+  width: inherit;
+  font-weight: unset;
+  font-size: 24px;
+  line-height: 32px;}
+
+  .radio-button-label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .radio-button-custom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px; 
+    border: 1px solid #000; 
+    border-radius: 50%;
+  }
+  
+ 
+  .radio-button-label input:checked + .radio-button-custom {
+    background-color: #000; 
+  }
+  
+  
+  .radio-button-label:hover .radio-button-custom {
+    background-color: #ddd;
+  }

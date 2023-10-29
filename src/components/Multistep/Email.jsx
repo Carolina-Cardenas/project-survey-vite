@@ -1,12 +1,13 @@
-import { useState } from "react"
-
-export const Email = () => {
-    const [email,setEmail] = useState()
+export const Email = ({updateFormData , value}) => {
+  const  emailInput = (e) => updateFormData("email" , e.target.value)
   return (
    <form>
-    <div>Can you tell me your email?</div> 
-    <div>    <input type="text"></input>
-    </div>
-     </form>
+     <div className="container">
+      <span className="spanText">Can you tell me your email?</span> 
+      <div>    
+        <input className="inputText" type="text" value={value} onChange={emailInput}></input>
+      </div>
+     </div>
+    </form>
   )
 }
