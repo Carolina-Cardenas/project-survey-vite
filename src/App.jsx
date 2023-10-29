@@ -6,7 +6,8 @@ export const App = () => {
 const [name, setName] = useState("");
   
   return(
-     <div>Find me in src/app.jsx!
+     <div>
+     
       <MultiStepForm/>
   </div>
 )};

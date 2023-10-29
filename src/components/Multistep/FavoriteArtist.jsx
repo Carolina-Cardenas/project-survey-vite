@@ -1,11 +1,16 @@
-import { useState } from "react"
 
-export const FavoriteArtist = () => {
-    const [name, setName] = useState()
+export const FavoriteArtist = ({updateFormData , value}) => {
+  const  favoriteArtistInput = (e) => updateFormData("favoriteArtist" , e.target.value)
   return (
-    <div>
-        Who is your favorite artist?  
-        <input type="text"></input> 
-         </div>
+   <form>
+    <div className="container">
+    <div className="spanText">
+      <span className="spanText"> Who is your favorite artist?</span> 
+      </div>
+        <div  className="answer">  
+          <input className="inputText"type="text" value={value} onChange={favoriteArtistInput}></input> 
+        </div>
+    </div>
+  </form>
   )
 }
