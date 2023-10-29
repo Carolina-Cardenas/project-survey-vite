@@ -19,10 +19,8 @@ code {
   margin: 0 auto;
   margin-top: 60px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   align-content: center;
-  
+  background-color: aliceblue;
 
 }
 button {
@@ -59,9 +57,11 @@ form{
 .buttons{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  
   align-items: center;
-  margin: 40px;
+  margin-left: 40%;
+  margin-right: 40%;
   
 }
 .radio-buttons{
@@ -155,22 +155,38 @@ form{
   .radio-buttons label input[type="radio"] {
     margin-right: 10px; 
   }
-  @media (min-width: 768px) {
-    .box {
-      flex-basis: calc(100%/3);
-      padding: 0 10px;
-    }
-    .responsive-header {
-      font-size: 35px;
-    }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+@media screen and (min-width: 1024px) {
+  .buttons button {
+    margin: 0 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  form {
+    margin: 10px;
+    padding: 10px;
   }
   
-  @media (min-width: 1024px) {
-    .box {
-      flex-basis: calc(100%/4);
-      padding: 0 10px;
-    }
-    .responsive-header {
-      font-size: 65px;
-    }
+  .buttons {
+    flex-direction: column;
   }
+  
+  .buttons button {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  form {
+    padding: 5px;
+  }
+  
+  .buttons button {
+    padding: 5px 10px;
+  }
+  
+}

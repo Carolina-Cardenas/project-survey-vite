@@ -10,11 +10,11 @@ setMusicType(e.target.value)
  return (
       <form>
        <div className="container">
-        <div className="spanText">
-          <span className="spanText"> Which one is you favorite music genre?</span>
-        </div>
-       <div className='radio-buttons'>
-        {musicTypes.map(group => (
+         <div className="spanText">
+           <span className="spanText"> Which one is you favorite music genre?</span>
+         </div>
+        <div className='radio-buttons'>
+         {musicTypes.map(group => (
           <label  key={group} htmlFor="group" className='radioText'>
            <input 
               type="radio"
@@ -25,8 +25,8 @@ setMusicType(e.target.value)
             </label>
      
           )) }
-         </div> 
-         </div>
+        </div> 
+       </div>
     </form>
    )
  }

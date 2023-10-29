@@ -61,7 +61,6 @@ export const MultiStepForm = () => {
       { currentStep === 5 && <FavoriteArtist value = {formData.favoriteArtist} updateFormData = { updateFormData}/>}
       { currentStep === 6 && <MusicType value = {formData.musicType} updateFormData = { updateFormData}/>}
       { currentStep === 7 && <AverageTime value = {formData.averageTime} updateFormData = { updateFormData}/>}
-  
    
       <div className="buttons">
       {currentStep > 1 && <button onClick={prevStep}>Back</button>}

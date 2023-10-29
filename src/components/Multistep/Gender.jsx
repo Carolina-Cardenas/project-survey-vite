@@ -4,7 +4,7 @@ export const Gender = ({updateFormData , value}) => {
     <form>
       <div className="container">
         <div className="spanText">
-        <span > Can you tell me your gender?</span>
+         <span> Can you tell me your gender?</span>
         </div>
         <div className="dropdown">
           <select className="selectText" name="gender" id="gender"value={value} onChange={genderInput} >
