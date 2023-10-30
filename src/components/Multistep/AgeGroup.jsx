@@ -1,10 +1,10 @@
 import { useState } from 'react'
 const ageGroups =["18-30" , "31-40" , "41+"];
 export const AgeGroup = ({updateFormData , value}) => {
-  const [ageGroup, setAgeGroup] = useState('')
-  
-  const  ageInput = (e) => {updateFormData("ageGroup" , e.target.value),
-  setAgeGroup(e.target.value)
+  const [ageGroup, setAgeGroup] = useState(value)
+  const  ageInput = (e) => {
+    updateFormData("ageGroup" , e.target.value),
+   setAgeGroup(e.target.value)
 }
   
   return (
