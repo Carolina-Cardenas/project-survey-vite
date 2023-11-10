@@ -1,10 +1,7 @@
-export const Summary = ({ formData, setShowSummary, setFormData }) => { 
-
-    return (
-    
-      <div>
-          <span className="spanText ">
-        
+export const Summary = ({ formData, setShowSummary, setFormData }) => {
+  return (
+    <div>
+      <span className="spanText ">
         <p>Hi! {formData.name}</p>
         <p>This is the information we collected from you</p>
         <p>Your email is {formData.email}</p>
@@ -13,9 +10,7 @@ export const Summary = ({ formData, setShowSummary, setFormData }) => {
         <p>Your favorite artist is {formData.favoriteArtist}</p>
         <p>You like to listen to {formData.musicType}</p>
         <p>You listen to music for {formData.averageTime} a day</p>
-        </span>
-      </div>
-
-    );
-  };
-  
+      </span>
+    </div>
+  );
+};
