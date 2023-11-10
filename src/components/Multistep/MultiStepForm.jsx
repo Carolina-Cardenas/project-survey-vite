@@ -58,6 +58,7 @@ export const MultiStepForm = () => {
     averageTime: ""
   });
   setCurrentStep(1)
+  setShowSummary(false)
  }
  
     return (
