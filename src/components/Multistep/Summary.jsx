@@ -1,6 +1,6 @@
 export const Summary = ({ formData, setShowSummary, setFormData }) => {
   return (
-    <div>
+    <div> {/* container div for this component that the show the summary of the input from the other compoents */}
       <span className="spanText ">
         <p>Hi! {formData.name}</p>
         <p>This is the information we collected from you</p>

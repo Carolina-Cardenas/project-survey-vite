@@ -10,11 +10,24 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;}  
+:root {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;}  
+ /* Styles for responsive images */ 
 .responsiveImage {
       width:100%
 }
-.body {
+/* Add styles directly to elements */
+body {
   max-width: 800px;
   margin: 0 auto;
   margin-top: 60px;
@@ -23,6 +36,7 @@ code {
   background-color: aliceblue;
 
 }
+/* Add styles directly to elements */
 button {
   background-color: rgb(124, 192, 192);
   color:rgb(42, 97, 96) ;
@@ -34,7 +48,7 @@ button {
   margin: 5px;
   margin-top: 40px;
 }
-
+/* Styles for the h1 heading */
 h1{
   color: rgb(124, 192, 192);
   margin-top: 20px;
@@ -42,7 +56,7 @@ h1{
   text-align: center;
   
 }
-
+/* Styles for the form */
 form{
   width: 100%;
   max-width: 600px;
@@ -53,7 +67,7 @@ form{
   align-items: center;
  }
 
-
+/* Add styles by class */
 .buttons{
   display: flex;
   flex-direction: row;
@@ -64,12 +78,14 @@ form{
   margin-right: 40%;
   
 }
+/* Styles for buttons */
+/* Add styles directly to elements */
 .radio-buttons{
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
+/* Style for imput text */
 .inputText {
   display: block;
   width: 100%;
@@ -99,6 +115,7 @@ form{
   box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
   background-color: transparent !important;
 }
+/* Style for span text */
 .spanText{    
   margin-top:10px;
   margin-bottom: 20px;
@@ -114,7 +131,7 @@ form{
     position: relative;
     cursor: pointer;
   }
-
+/* Styles for select text */
   .selectText{
     display: block;
     font-family: inherit;
@@ -161,6 +178,7 @@ form{
   justify-content: space-between;
   margin-top: 70px;
 }
+/* This is for responsiveness */
 @media screen and (min-width: 1024px) {
   .buttons button {
     margin: 0 15px;
@@ -190,3 +208,4 @@ form{
   }
   
 }
+
